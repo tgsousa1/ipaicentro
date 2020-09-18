@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="ipai_resultados_simp.geojson"></script>
+    <title>Índice Potencial de Atração de Investimentos - Região Centro</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <h1><span  style="background-color:#88d200; color:whitesmoke">Índice Potencial de Atração de Investimentos<br>Região Centro</span></h1>
+        </div>
+    </header>
+<main>
+    <div class="intro">
+        <div class="intro-text">
+            
+            <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000
+                anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC.
+                Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais
+                obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre
+                citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das
+                seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero,
+                escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A
+                primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.</p>
+        </div>
+        <!--<div class="intro-img"> </div>-->
+    </div>
+
+    <div class="indicadores">
+        <div class="divtit"><h2> <span style="background-color:#88d200;">INDICADORES</span></h2></div>
+        <p style="margin-bottom: 10px;">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
+        <div class="col-container">
+            <div class="col">
+              <div class="indtit"><span style="font-size:3em; color:#88d200;padding-left: 10px;"><i class="fas fa-users"></i></span><h3><br> &nbsp; Socioeconómicos</h3></div>
+              <ul>
+                  <li><i class="fas fa-check-circle"></i> Densidade Populacional</li>
+                  <li><i class="fas fa-check-circle"></i> Índice de Sustentabilidade Potencial</li>
+                  <li><i class="fas fa-check-circle"></i> Saldo Migratório</li>
+                  <li><i class="fas fa-check-circle"></i> Taxa de Desemprego</li>
+                  <li><i class="fas fa-check-circle"></i> Salário Médio (mensal)</li>
+                  <li><i class="fas fa-check-circle"></i> Poder de Compra</li>
+                  <li><i class="fas fa-check-circle"></i> Médicos / 1000hab</li>
+                  <li><i class="fas fa-check-circle"></i> Receitas Efetivas per Cápita</li>
+              </ul>
+            </div>
+          
+            <div class="col">
+              <div class="indtit"><span style="font-size:3em; color:#88d200; padding-left: 10px;"><i class="fas fa-thermometer-half"></i></span><h3><br>&nbsp; Competitividade</h3></div>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Densidade Empresarial</li>
+                <li><i class="fas fa-check-circle"></i> Taxa de Sobrevivência Empresarial</li>
+                <li><i class="fas fa-check-circle"></i> Saldo Empresarial</li>
+                <li><i class="fas fa-check-circle"></i> Produdtividade Aparente</li>
+                <li><i class="fas fa-check-circle"></i> Empresas / 100hab</li>
+                <li><i class="fas fa-check-circle"></i> Incubadoras Empresariais</li>
+                <li><i class="fas fa-check-circle"></i> Parques de Ciencia e Tecnologia</li>
+            </ul>
+            </div>
+          
+            <div class="col">
+             <div class="indtit"><span style="font-size:3em; padding-left: 10px;"><i class="fas fa-road"></i></span><h3>Infraestruturas Físicas<br>e Acessibilidade</h3></div> 
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Territórios Artificializados</li>
+                <li><i class="fas fa-check-circle"></i> Área de Comercio e Indústria</li>
+                <li><i class="fas fa-check-circle"></i> Acessibilidade Intraconcelhia</li>
+                <li><i class="fas fa-check-circle"></i> Viagem à Lisboa</li>
+                <li><i class="fas fa-check-circle"></i> Viagem ao Porto</li>
+                <li><i class="fas fa-check-circle"></i> Quilometragem de Vias per Cápita</li>
+            </ul>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="destaques">
+        <div class="divtit"><h2>ESSAS FORAM AS <span style="background-color:#88d200;">5 PRIMEIRAS CIDADES</span></h2></div>
+        <div class="itensdestaque" style="overflow-x:auto;">
+            <div class="responsive">
+                <div class="gallery">
+                  <img src="/img/entroncamento.png" alt="Entroncamento">
+                  <div class="desc"><b>#1 - Entroncamento</b></div>
+                </div>
+              </div>
+              
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <img src="/img/aveiro.png" alt="Aveiro">
+                  <div class="desc"><b>#2 - Aveiro</b></div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="/img/coimbra.png" alt="Coimbra">
+                  <div class="desc"><b>#3 - Coimbra</b></div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <img src="/img/ilhavo.png" alt="Ílhavo">
+                  <div class="desc"><b>#4 - Ílhavo</b></div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <img src="/img/leiria.png" alt="Leiria">
+                  <div class="desc"><b>#5 - Leiria</b></div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <th>teste</th>
+                <th>teste</th>
+                <th>teste</th>
+                <th>teste</th>
+            </thead>
+            <tbody>
+                <td>vete</td>
+                <td>vete</td>
+                <td>vete</td>
+                <td>vete</td>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="map" id="map">
+
+    </div>
+
+    <div class="indicadores">
+        <div class="divtit"><h2><span  style="background-color:#88d200;">NOTAS METODOLÓGICAS</span></h2></div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000
+                anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC.
+                Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais
+                obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre
+                citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das
+                seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero,
+                escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A
+                primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.</p>
+    </div>
+
+    <div class="indicadores">
+        <div class="divtit"><h2><span  style="background-color:#88d200;">FONTES</span></h2></div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000
+                anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC.
+                Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais
+                obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre
+                citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das
+                seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero,
+                escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A
+                primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.</p>
+    </div>
+
+    <div class="destaques">
+        <div class="divtit"><h3><span  style="background-color:#88d200;">CRÉDITOS</span></h3></div>
+        <p style="text-align: center;">
+          AJUSTAR DEPOIS<br>
+          Fotos: Entroncamento (F.Oliveira - Radio Hertz) | Aveiro (NCultura.pt) | Coimbra (noticiasdecoimbra.pt) | Ílhavo (noticiasdeaveiro.pt) | Leiria (eurotrip.com.br / depositphotos)
+        </p>
+    </div>
+    <script src="map.js"></script>
+</main>
+</body>
+
+</html>
