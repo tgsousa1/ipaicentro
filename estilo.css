@@ -65,8 +65,23 @@ main{
     width: auto;
 }
 
+@media only screen and (max-width: 700px) {
+  .destaques { 
+    padding: 20px;
+    display: block;
+    width: 100%;
+  }
+}
+
 .itensdestaque{
     text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .itensdestaques { 
+    padding: 20px;
+    display: block;
+    width: 100%;
+  }
 }
 
 /*.indicadores section{
@@ -135,6 +150,14 @@ div.desc {
     height: auto;
 }
 
+@media only screen and (max-width: 700px) {
+  .table { 
+    padding: 20px;
+    display: block;
+    width: 100%;
+  }
+}
+
 .table table{
     height: 300px;
 }
@@ -150,7 +173,7 @@ div.desc {
     overflow: auto;
   }
   
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1025px) {
     .col-container { 
       display: block;
       width: 100%;
@@ -173,6 +196,27 @@ div.desc {
   .indtit{
       display: flex;
       height: 60px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .indtit { 
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .indic{
+    font-size:3em; 
+    color:#88d200; 
+    padding-left: 10px;
+  }
+
+  @media only screen and(max-width:400px){
+    .indic{
+    font-size: 1em;
+    color:#88d200; 
+    padding-left: 10px;
+    }
   }
 
   .divtit{
@@ -205,7 +249,7 @@ div.desc {
 .legend {
   padding: 6px 8px;
   font: 16px;
-  width: 200px;
+  width: 250px;
   background: white;
   background: rgba(255,255,255,0.8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
